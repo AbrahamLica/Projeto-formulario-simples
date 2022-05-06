@@ -1,7 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-main{
-    background-color: purple;
-}
+
+main::before {
+    font-family: "Poppins", sans-serif;
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-image: linear-gradient(
+        45deg,
+        rgba(58, 58, 158, 0.8),
+        rgba(136, 136, 206, 0.7)
+      ),
+      url(img/tecnologia.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
 main h1{
     text-align: center;
     color: white;
