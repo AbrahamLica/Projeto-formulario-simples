@@ -16,5 +16,7 @@ main h2{
     text-align: center;
     color: white;
     font-family: "Poppins", sans-serif;
+    font-style: italic;
     font-size: 18px;
+
 }
