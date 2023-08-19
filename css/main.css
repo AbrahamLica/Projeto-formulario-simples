@@ -1,11 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-
 * {
   font-family: "Poppins", sans-serif;
 }
+
 main::before {
-  
   content: "";
   position: fixed;
   top: 0;
@@ -25,7 +24,6 @@ main::before {
 }
 
 main {
-  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,12 +35,9 @@ main h1 {
   color: white;
   font-family: "Poppins", sans-serif;
   font-size: 32px;
-  padding-top: 50px;
-  padding-bottom: 20px;
 }
 
 main h2 {
-  padding-bottom: 30px;
   text-align: center;
   color: white;
   font-family: "Poppins", sans-serif;
@@ -66,3 +61,5 @@ main h2 {
   border: none;
   box-shadow: 2px 2px 3px black;
 }
+
+

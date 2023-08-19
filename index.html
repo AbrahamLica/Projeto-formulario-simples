@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Suvey Form</title>
-    <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/form.css" />
+    <link rel="stylesheet" href="./css/modal.css">
   </head>
   <body>
     <main>
@@ -73,7 +73,7 @@
 
         <div class="form-group">
           <p class="label">Qual sua area de atuação atualmente?</p>
-          <select class="input-box" required="">
+          <select class="input-box" id="select" required="">
             <option disabled="" selected="" value="">Selecione...</option>
             <option value="desempregado">Desempregado</option>
             <option value="tecnologia">Tecnologia</option>
@@ -85,51 +85,57 @@
 
         <div class="qualities">
           <p class="label">Quais são as suas qualidades?</p>
+
           <label class="label">
             <input
               type="checkbox"
-              name="front"
+              name="carismatico"
               value="Carismatico"
-              class="input-radio"
+              class="input-checkbox"
             />
             Carismatico
           </label>
+
           <label class="label">
             <input
               type="checkbox"
-              name="back"
+              name="pontual"
               value="Pontual"
-              class="input-radio"
+              class="input-checkbox"
             />
             Pontual
           </label>
+
           <label class="label">
             <input
               type="checkbox"
-              name="data"
+              name="esforcado"
               value="Esforçado"
-              class="input-radio"
+              class="input-checkbox"
             />
             Esforçado
           </label>
+
           <label class="label">
             <input
               type="checkbox"
-              name="challenges"
+              name="competente"
               value="Competente"
-              class="input-radio"
+              class="input-checkbox"
             />
             Competente
           </label>
+
           <label class="label">
             <input
               type="checkbox"
-              name="open"
+              name="conquistador"
               value="Conquistador de metas"
-              class="input-radio"
+              class="input-checkbox"
             />
             Conquistador de metas
           </label>
+
         </div>
 
         <div class="form-aditional-comments">
@@ -146,8 +152,58 @@
           <input class="ButtonSend" type="submit" value="Enviar" />
         </div>
 
+    
+
 
       </form>
+
+      <div class="containerModal">
+
+          <div class="containerInformations">
+
+            <div class="containerSingleInformation">
+              <p>Nome: </p>
+              <p class="nameModal"></p>
+            </div>
+
+            <div class="containerSingleInformation">
+              <p>CPF: </p>
+              <p class="cpfModal"></p>
+            </div>
+
+            <div class="containerSingleInformation">
+              <p>Email: </p>
+              <p class="emailModal"></p>
+            </div>
+
+            <div class="containerSingleInformation">
+              <p>Idade: </p>
+              <p class="ageModal">aaaa</p>
+            </div>
+
+            <div class="containerSingleInformation">
+              <p>Profissão: </p>
+              <p class="professionModal">asdasdas</p>
+            </div>
+
+            <div class="containerSingleInformation">
+              <p>Qualidades: </p>
+              <p class="qualitiesModal"></p>
+            </div>
+
+            <div class="containerSingleInformation">
+              <p>Observações: </p>
+              <p class="observationsModal"></p>
+            </div>
+            
+          </div>
+
+          <div class="containerButtons">
+            <button>Confirmar</button>
+            <button>Cancelar</button>
+          </div>
+
+      </div>
     </main>
   </body>
 

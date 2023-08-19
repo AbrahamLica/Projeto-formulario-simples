@@ -26,7 +26,7 @@
   transition: border-color 0.15s ease-in-out, box-shadow 15s ease-in-out;
 }
 
-.input-radio {
+.input-checkbox {
   display: inline-block;
   margin-right: 0.625rem;
   min-height: 1.25rem;
@@ -73,3 +73,4 @@
   display: none;
   margin-top: 5px;
 }
+
