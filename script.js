@@ -10,21 +10,23 @@ const buttonSend = document.querySelector(".ButtonSend");
 const select = document.querySelector("#select");
 const inputsCheckbox = document.querySelectorAll(".input-checkbox");
 /////////////////////////////////////////////////////////////////////////
-const containerModal = document.querySelector(".containerModal");
+const containerBackgroundModal = document.querySelector(
+  ".containerBackgroundModal"
+);
 const nameModal = document.querySelector(".nameModal");
 const cpfModal = document.querySelector(".cpfModal");
 const emailModal = document.querySelector(".emailModal");
 const ageModal = document.querySelector(".ageModal");
 const professionModal = document.querySelector(".professionModal");
-const qualitiesModal = document.querySelector(".qualitiesModal");
-const observationsModal = document.querySelector(".observationsModal");
+const btnCancel = document.querySelector(".btnCancel");
+const btnConfirm = document.querySelector(".btnConfirm");
 /////////////////////////////////////////////////////////////////////////
 var inputNameValid = false;
 var inputAgeValid = false;
 var inputEmailValid = false;
 var inputCpfValid = false;
 var inputSelectOptValid = false;
-var qualities = []
+var invalids = [];
 
 function validateInputName() {
   //////////////////Input Name///////////////////////////////////////////////////////
@@ -115,22 +117,29 @@ function validateEmail(str) {
 }
 
 buttonSend.addEventListener("click", (e) => {
-
   e.preventDefault();
 
   // checar se o dropdown tem alguma opção selecionada
   if (select.selectedIndex == 0) {
-    alert("Selecione sua profissão");
     inputSelectOptValid = false;
   } else {
     inputSelectOptValid = true;
   }
 
-  //checar se tem algum checkbox de qualidade marcado
-  for (let i = 0; i < inputsCheckbox.length; i++) {
-    if (inputsCheckbox[i].checked) {
-      qualities.push(inputsCheckbox[i].value)
-    }
+  if (!inputNameValid) {
+    invalids.push("Nome");
+  }
+  if (!inputEmailValid) {
+    invalids.push("Email");
+  }
+  if (!inputAgeValid) {
+    invalids.push("Idade");
+  }
+  if (!inputCpfValid) {
+    invalids.push("Cpf");
+  }
+  if (!inputSelectOptValid) {
+    invalids.push("Profissão");
   }
 
   if (
@@ -140,18 +149,32 @@ buttonSend.addEventListener("click", (e) => {
     inputCpfValid &&
     inputSelectOptValid
   ) {
-    containerModal.style.display = 'flex'
+    containerBackgroundModal.style.display = "flex";
+    document.body.style.overflow = "hidden";
 
     nameModal.innerHTML = name.value;
     cpfModal.innerHTML = cpf.value;
     emailModal.innerHTML = email.value;
     ageModal.innerHTML = age.value;
     professionModal.innerHTML = select.options[select.selectedIndex].text;
-    qualitiesModal.innerHTML = qualities.join(', ')
+    qualitiesModal.innerHTML = qualities.join(", ");
     // observationsModal.innerHTML =
   } else {
-    console.log("falta");
+    alert(
+      `Os seguintes campos estão vazios ou inválidos: ${invalids.join(", ")}`
+    );
   }
+});
+
+btnCancel.addEventListener("click", () => {
+  containerBackgroundModal.style.display = "none";
+  document.body.style.overflow = "visible";
+});
+
+btnConfirm.addEventListener("click", () => {
+  alert("Seus dados foram enviados com sucesso!");
+  window.location.reload();
+  window.scrollTo(0, 0);
 });
 
 name.addEventListener("blur", () => {

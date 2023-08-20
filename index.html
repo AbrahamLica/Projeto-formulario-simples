@@ -7,16 +7,33 @@
     <title>Suvey Form</title>
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/form.css" />
-    <link rel="stylesheet" href="./css/modal.css">
+    <link rel="stylesheet" href="./css/modal.css" />
   </head>
   <body>
     <main>
-      <h1>Formulário Básico de HTML + CSS3</h1>
-      <h2>Criado por Abraham Licá</h2>
+      <h1>Formulário Básico de HTML5 + CSS3</h1>
+      <div class="containerAuthor">
+        <h2>
+          Criado por
+          <a href="https://github.com/AbrahamLica" target="_blank"
+            >Abraham Licá</a
+          >
+        </h2>
+
+        <div>
+          <img src="./img/avatar.png" alt="meu avatar" class="avatar" />
+          <a href="https://github.com/AbrahamLica" target="_blank"
+            ><img src="./img/github.png" alt="github" class="github"
+          /></a>
+          <a
+            href="https://www.linkedin.com/in/abraham-melquisedeque-pereira-lic%C3%A1-0a1736203/"
+            target="_blank"
+            ><img src="./img/linkedin.png" alt="github" class="linkedin"
+          /></a>
+        </div>
+      </div>
 
       <form class="mainContainerform">
-
-        
         <div class="form-group">
           <label for="name" class="label">Nome Completo*</label>
           <input
@@ -135,7 +152,6 @@
             />
             Conquistador de metas
           </label>
-
         </div>
 
         <div class="form-aditional-comments">
@@ -151,58 +167,43 @@
         <div class="containerButtonSend">
           <input class="ButtonSend" type="submit" value="Enviar" />
         </div>
-
-    
-
-
       </form>
 
-      <div class="containerModal">
-
+      <div class="containerBackgroundModal">
+        <div class="containerModal">
           <div class="containerInformations">
-
+            <h3>Por favor, confirme suas informações principais, antes de enviar.</h3>
             <div class="containerSingleInformation">
-              <p>Nome: </p>
-              <p class="nameModal"></p>
+              <p>Nome:</p>
+              <p class="nameModal">asdasdsad</p>
             </div>
 
             <div class="containerSingleInformation">
-              <p>CPF: </p>
-              <p class="cpfModal"></p>
+              <p>CPF:</p>
+              <p class="cpfModal">asdsada</p>
             </div>
 
             <div class="containerSingleInformation">
-              <p>Email: </p>
-              <p class="emailModal"></p>
+              <p>Email:</p>
+              <p class="emailModal">asdsadasd</p>
             </div>
 
             <div class="containerSingleInformation">
-              <p>Idade: </p>
+              <p>Idade:</p>
               <p class="ageModal">aaaa</p>
             </div>
 
             <div class="containerSingleInformation">
-              <p>Profissão: </p>
+              <p>Profissão:</p>
               <p class="professionModal">asdasdas</p>
             </div>
-
-            <div class="containerSingleInformation">
-              <p>Qualidades: </p>
-              <p class="qualitiesModal"></p>
-            </div>
-
-            <div class="containerSingleInformation">
-              <p>Observações: </p>
-              <p class="observationsModal"></p>
-            </div>
-            
           </div>
 
           <div class="containerButtons">
-            <button>Confirmar</button>
-            <button>Cancelar</button>
+            <button class="btnConfirm">Confirmar</button>
+            <button class="btnCancel">Cancelar</button>
           </div>
-
+        </div>
       </div>
     </main>
   </body>

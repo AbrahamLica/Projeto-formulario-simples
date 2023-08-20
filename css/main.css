@@ -45,6 +45,34 @@ main h2 {
   font-size: 18px;
 }
 
+main h2 a {
+  text-decoration: none;
+}
+
+.containerAuthor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  width: 50px;
+  margin-left: 15px;
+}
+
+.github {
+  width: 50px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.linkedin {
+  width: 50px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
 .containerButtonSend {
   margin-top: 20px;
   display: flex;
